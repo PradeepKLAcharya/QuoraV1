@@ -4,6 +4,8 @@ import com.upgrad.quora.service.dao.UserDao;
 import com.upgrad.quora.service.entity.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class SignupBusinessService {
@@ -14,6 +16,7 @@ public class SignupBusinessService {
     @Autowired
     private PasswordCryptographyProvider cryptographyProvider;
 
+    @Transactional(propagation = Propagation.REQUIRED)
     public Users signup(Users userEntity){
         //todo: Move to common once AdminBusinessLogic is ready.
         String password = userEntity.getPassword();

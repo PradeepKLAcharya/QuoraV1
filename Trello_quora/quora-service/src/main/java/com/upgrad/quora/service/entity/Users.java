@@ -5,15 +5,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.time.ZonedDateTime;
-
+@Entity
+@Table(name = "Users", schema = "public")
 public class Users implements Serializable {
 
     @Id
@@ -55,13 +53,12 @@ public class Users implements Serializable {
     @Size(max = 200)
     private String country;
 
-    @Column(name = "ABOUNTME")
+    @Column(name = "ABOUTME")
     @NotNull
     @Size(max = 200)
     private String aboutme;
 
     @Column(name = "ROLE")
-    @NotNull
     @Size(max = 200)
     private String role;
 

@@ -87,3 +87,17 @@ Trello_quora/quora-service/target/maven-status/maven-compiler-plugin/compile/def
 Trello_quora/quora-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
 Trello_quora/quora-service/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
 Trello_quora/quora-service/target/quora-service-1.0-SNAPSHOT.jar
+Trello_quora/.idea/vcs.xml
+Trello_quora/pom.xml
+Trello_quora/quora-api/src/main/java/com/upgrad/quora/api/controller/SignupController.java
+Trello_quora/quora-api/src/main/java/com/upgrad/quora/api/controller/SignupController.java
+Trello_quora/quora-api/target/classes/.swagger-codegen-ignore
+Trello_quora/quora-api/src/main/java/com/upgrad/quora/api/controller/SignupController.java
+Trello_quora/quora-api/target/classes/.swagger-codegen/VERSION
+Trello_quora/quora-api/target/classes/com/upgrad/quora/api/controller/SignupController.class
+Trello_quora/quora-service/target/classes/com/upgrad/quora/service/business/SignupBusinessService.class
+*.class
+Trello_quora/quora-api/target/classes/src/main/resources/application.properties
+Trello_quora/quora-api/target/classes/README.md
+Trello_quora/quora-service/target/classes/com/upgrad/quora/service/business/SignupBusinessService.class
+Trello_quora/quora-service/target/classes/com/upgrad/quora/service/entity/Users.class
