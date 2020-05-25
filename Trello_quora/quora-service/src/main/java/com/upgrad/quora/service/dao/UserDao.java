@@ -58,4 +58,17 @@ public class UserDao {
         }
 
     }
+
+    public Users deleteUser(String userUuid) {
+        Users user;
+        try {
+            user = entityManager.createNamedQuery("userByUuid", Users.class).setParameter("uuid", userUuid).getSingleResult();
+        }catch (NoResultException nre)
+        {
+            return null;
+        }
+        entityManager.remove(user);;
+        return user;
+
+    }
 }

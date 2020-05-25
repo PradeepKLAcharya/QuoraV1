@@ -32,6 +32,5 @@ public class UserBusinessService {
             }
             return userEntity;
         }
-     // todo: Throw exception   throw new UnauthorizedException("ATH-002", "you are not authorized to fetch user details");
     }
 
