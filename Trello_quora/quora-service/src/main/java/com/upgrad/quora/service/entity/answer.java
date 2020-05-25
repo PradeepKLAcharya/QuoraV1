@@ -10,7 +10,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.time.ZonedDateTime;
-
+@Entity
+@Table(name = "answer", schema = "public")
 public class answer implements Serializable {
 
     @Id
@@ -26,6 +27,19 @@ public class answer implements Serializable {
     @NotNull
     @Size(max = 200)
     private String ans;
+
+    @Column(name = "ROLE")
+    @NotNull
+    @Size(max = 200)
+    private String role;
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 
     @Column(name = "DATE")
     private ZonedDateTime date;

@@ -35,9 +35,10 @@ public class SignupController {
         userEntity.setPassword(signupUserRequest.getPassword());
         userEntity.setContactnumber(signupUserRequest.getContactNumber());
         userEntity.setUsername(signupUserRequest.getUserName());
+        userEntity.setRole("nonadmin"); //todo: Move to common mapping class, non admin or admin should be in business logic?
         final Users createdUserEntity = signupBusinessService.signup(userEntity);
         SignupUserResponse userResponse = new SignupUserResponse().id(createdUserEntity.getUuid()).status("USER SUCCESSFULLY REGISTERED");
-        return new ResponseEntity<SignupUserResponse>(userResponse, HttpStatus.CREATED);
+        return new ResponseEntity<SignupUserResponse>(userResponse, HttpStatus.CREATED); //todo: handle exception
 
     }
 

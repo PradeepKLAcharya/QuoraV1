@@ -10,7 +10,9 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.time.ZonedDateTime;
-
+//todo: rename this to userauth and then add table attribute
+@Entity
+@Table(name = "user_auth", schema = "public")
 public class user_auth implements Serializable {
 
 
@@ -27,6 +29,19 @@ public class user_auth implements Serializable {
     @NotNull
     @Size(max = 500)
     private String accessToken;
+
+    @Column(name = "UUID")
+    @NotNull
+    @Size(max = 500)
+    private String uuid;
+
+    public String getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
+    }
 
     @Column(name = "LOGIN_AT")
     @NotNull

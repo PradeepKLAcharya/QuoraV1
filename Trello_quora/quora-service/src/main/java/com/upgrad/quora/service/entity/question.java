@@ -10,7 +10,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.time.ZonedDateTime;
-
+@Entity
+@Table(name = "question", schema = "public")
 public class question implements Serializable {
     @Id
     @Column(name = "ID")
