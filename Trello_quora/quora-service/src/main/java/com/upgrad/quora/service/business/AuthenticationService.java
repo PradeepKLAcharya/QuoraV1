@@ -48,4 +48,12 @@ public class AuthenticationService {
         }
 
     }
+//todo: change name as authenticateand logout
+@Transactional(propagation = Propagation.REQUIRED)
+    public user_auth authenticateBearer(String token) {
+       user_auth  userEntity = userDao.FindByAuthToken(token);
+       userEntity.setLogoutAt(ZonedDateTime.now());
+        userDao.updateUserEntity(userEntity);
+        return  userEntity;
+    }
 }

@@ -13,6 +13,10 @@ import java.time.ZonedDateTime;
 //todo: rename this to userauth and then add table attribute
 @Entity
 @Table(name = "user_auth", schema = "public")
+@NamedQueries(
+        {
+                @NamedQuery(name = "userByAuthToken", query = "select u from user_auth u where u.accessToken = :accessToken")
+        })
 public class user_auth implements Serializable {
 
 
